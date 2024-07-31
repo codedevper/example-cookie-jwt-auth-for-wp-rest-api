@@ -1,12 +1,19 @@
 {
-    "name": "wordpress/jwt-auth",
-    "description": "JWT Authentication for WordPress.",
+    "name": "app/all-in-one-wp-rest-api",
+    "description": "All In One WordPress REST API Plugin.",
     "type": "wordpress-plugin",
     "autoload": {
         "psr-4": {
             "App\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "CodeDevper",
+            "email": "codedevper@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
     "require": {
         "firebase/php-jwt": "^6.10"
     }

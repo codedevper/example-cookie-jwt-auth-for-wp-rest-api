@@ -20,5 +20,11 @@ http://wp.test/wp-json/jwt-auth/v1/register
 ## Create Token
 http://wp.test/wp-json/jwt-auth/v1/login
 
+## Refresh Token
+http://wp.test/wp-json/jwt-auth/v1/refresh
+
+## Invoke Token
+http://wp.test/wp-json/jwt-auth/v1/invoke
+
 ## Get User
-http://wp.test/wp-json/jwt-auth/v1/user
+http://wp.test/wp-json/jwt-auth/v1/user-info
