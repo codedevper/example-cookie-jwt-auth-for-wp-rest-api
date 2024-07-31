@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Plugin Name: All In One WordPress REST API
- * Plugin URI:  https://github.com/codedevper/all-in-one-wp-rest-api
- * Description: All In One WordPress REST API Plugin.
+ * Plugin Name: Example Cookie & JWT - WordPress Authentication
+ * Plugin URI:  https://github.com/codedevper/example-cookie-jwt-auth-for-wp-rest-api
+ * Description: Example Cookie & JWT - WordPress Authentication REST API Plugin.
  * Version:     1.0.0
  * Author:      CodeDevper
- * Author URI:  https://github.com/codedevper/all-in-one-wp-rest-api
+ * Author URI:  https://github.com/codedevper/example-cookie-jwt-auth-for-wp-rest-api
  * License:     GPL-3.0
- * License URI: https://github.com/codedevper/all-in-one-wp-rest-api
- * Text Domain: all-in-one-wp-rest-api
+ * License URI: https://github.com/codedevper/example-cookie-jwt-auth-for-wp-rest-api
+ * Text Domain: example-cookie-jwt-auth-for-wp-rest-api
  * Domain Path: /languages
  *
- * @package all-in-one-wp-rest-api
+ * @package example-cookie-jwt-auth-for-wp-rest-api
  */
 
 defined('ABSPATH') || die("Can't access directly");
