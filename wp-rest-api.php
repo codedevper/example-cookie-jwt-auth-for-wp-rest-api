@@ -26,8 +26,4 @@ define('PLUGIN_VERSION', '1.0.0');
 require_once __DIR__ . '/vendor/autoload.php';
 
 // Require classes.
-require __DIR__ . '/src/Auth/class-jwt-auth.php';
-
-use App\Auth\JWTAuth;
-
-new JWTAuth();
+require __DIR__ . '/src/class-setup.php';

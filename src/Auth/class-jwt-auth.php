@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Auth;
+namespace App\auth;
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
@@ -12,6 +12,8 @@ use Exception;
 
 class JWTAuth
 {
+    private $rest_url = 'rest-api/v1/jwt-auth';
+
     //private $secret_key = 'your_secret_key'; // Change this to your secret key
     //private $refresh_token_key = 'your_refresh_secret_key'; // Change this to your refresh token secret key
     private $alg = 'HS256';
@@ -23,7 +25,7 @@ class JWTAuth
 
     public function register_routes()
     {
-        register_rest_route('jwt-auth/v1', '/register', array(
+        register_rest_route($this->rest_url, '/register', array(
             'methods'  => 'POST',
             'callback' => array($this, 'create_user'),
             'args'     => array(
@@ -42,7 +44,7 @@ class JWTAuth
             ),
         ));
 
-        register_rest_route('jwt-auth/v1', '/login', array(
+        register_rest_route($this->rest_url, '/login', array(
             'methods'  => 'POST',
             'callback' => array($this, 'login_user'),
             'args'     => array(
@@ -57,7 +59,7 @@ class JWTAuth
             ),
         ));
 
-        register_rest_route('jwt-auth/v1', '/refresh', array(
+        register_rest_route($this->rest_url, '/refresh', array(
             'methods'  => 'POST',
             'callback' => array($this, 'refresh_token'),
             'permission_callback' => array($this, 'check_jwt_token'),
@@ -69,7 +71,7 @@ class JWTAuth
             ),
         ));
 
-        register_rest_route('jwt-auth/v1', '/invoke', array(
+        register_rest_route($this->rest_url, '/invoke', array(
             'methods'  => 'POST',
             'callback' => array($this, 'invoke_token'),
             'permission_callback' => array($this, 'check_jwt_token'),
@@ -81,7 +83,7 @@ class JWTAuth
             ),
         ));
 
-        register_rest_route('jwt-auth/v1', '/user-info', array(
+        register_rest_route($this->rest_url, '/user-info', array(
             'methods'  => 'GET',
             'callback' => array($this, 'get_user_info'),
             'permission_callback' => array($this, 'check_jwt_token'),
@@ -434,3 +436,5 @@ class JWTAuth
         return JWT::encode($token, $secret_key, $this->alg);
     }
 }
+
+new JWTAuth();
